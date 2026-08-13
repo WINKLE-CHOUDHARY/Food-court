@@ -1,15 +1,20 @@
 # functions
 
 def browse_food():
-    pass
-
+    print('''🍕 Pizza — ₹149
+🍔 Veg Burger — ₹99
+🌯 Veg Wrap — ₹89
+🍜 Hakka Noodles — ₹129
+🥗 Paneer Salad — ₹119''')
 
 def search_food():
     pass
 
-
 def restaurants():
-    pass
+    print('''🍕 Pizza Palace
+🍜 Wok Express
+🥘 Spice Hub
+🍔 Burger Point''')
 
 
 def cart():
