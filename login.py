@@ -11,11 +11,28 @@ def search_food():
     pass
 
 def restaurants():
-    print('''🍕 Pizza Palace
-🍜 Wok Express
-🥘 Spice Hub
-🍔 Burger Point''')
+    print('''1. 🍕 Pizza Palace
+2. 🍜 Wok Express
+3. 🍚 Spice Hub
+4. 🍔 Burger Point
+5. exit ''')
 
+    while True:
+            
+        user = input("Enter the restaurant number to view menu: ")
+        if user == '1':
+            print('''🍕 Pizza Palace Menu:''')
+        elif user == '2':
+            print('''🍜 Wok Express Menu:''')
+        elif user == '3':
+            print('''🍚 Spice Hub Menu:''')
+        elif user == '4':
+            print('''🍔 Burger Point Menu:''')
+        elif user == '5':
+            print("Exiting restaurant menu.")
+            break
+        else:
+            print("Invalid input. Please enter a number between 1 and 5.")
 
 def cart():
     pass
@@ -62,7 +79,8 @@ def profile():
 
 
 def logout():
-    pass
+    print("You have been logged out. Thank you for visiting!")
+    
 
 
 def main_lobby():
@@ -89,52 +107,56 @@ Welcome user!
 14. 👤 Profile
 15. 🚪 Logout
 """)
-    choice=int(input("Enter the number according to your choice:"))
 
-    if choice == 1:
-        browse_food()
+    while True:
+            
+        choice=int(input("Enter the number according to your choice:"))
 
-    elif choice == 2:
-        search_food()
+        if choice == 1:
+            browse_food()
 
-    elif choice == 3:
-        restaurants()
+        elif choice == 2:
+            search_food()
 
-    elif choice == 4:
-        cart()
+        elif choice == 3:
+            restaurants()
 
-    elif choice == 5:
-        available_seats()
+        elif choice == 4:
+            cart()
 
-    elif choice == 6:
-        my_reservations()
+        elif choice == 5:
+            available_seats()
 
-    elif choice == 7:
-        my_orders()
+        elif choice == 6:
+            my_reservations()
 
-    elif choice == 8:
-        favorites()
+        elif choice == 7:
+            my_orders()
 
-    elif choice == 9:
-        offers()
+        elif choice == 8:
+            favorites()
 
-    elif choice == 10:
-        wallet()
+        elif choice == 9:
+            offers()
 
-    elif choice == 11:
-        food_points()
+        elif choice == 10:
+            wallet()
 
-    elif choice == 12:
-        reviews()
+        elif choice == 11:
+            food_points()
 
-    elif choice == 13:
-        notifications()
+        elif choice == 12:
+            reviews()
 
-    elif choice == 14:
-        profile()
+        elif choice == 13:
+            notifications()
 
-    elif choice == 15:
-        logout()
+        elif choice == 14:
+            profile()
+
+        elif choice == 15:
+            logout()
+            break
 
 
 #main maal
