@@ -1,7 +1,28 @@
 
 #functions
 def main_lobby():
-    print("access granted")
+    print("""
+════════════════════════════════════
+          👤 USER PORTAL
+════════════════════════════════════
+
+Welcome user!
+
+🍔 Browse Food
+🔎 Search Food
+🏪 Restaurants
+🛒 Cart
+🪑 Available Seats
+📅 My Reservations
+📦 My Orders
+❤️ Favorites
+🎟️ Offers
+💰 Wallet
+🏆 Food Points
+⭐ Reviews
+🔔 Notifications
+👤 Profile
+🚪 Logout""")
 
 #main maal
 while True:
