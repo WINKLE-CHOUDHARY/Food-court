@@ -1,11 +1,18 @@
 # functions
 
+
 def browse_food():
-    print('''🍕 Pizza — ₹149
-🍔 Veg Burger — ₹99
-🌯 Veg Wrap — ₹89
-🍜 Hakka Noodles — ₹129
-🥗 Paneer Salad — ₹119''')
+    order = input('''plz enter the food you want to browse''')
+    print(f"searhing for {order}.......")
+    dict = {
+        'pizza': '🍕from Pizza Palace',
+        'burger': '🍔 from Burger Point',
+        'pasta': '🍜 from Wok Express'
+    }
+    if order in dict:
+        print(f"Found {order}! Here's the emoji: {dict[order]}")
+    else:
+        print(f"Sorry, {order} is not available.")
 
 def search_food():
     pass
@@ -15,7 +22,7 @@ def restaurants():
 2. 🍜 Wok Express
 3. 🍚 Spice Hub
 4. 🍔 Burger Point
-5. exit ''')
+5. Exit ''')
 
     while True:
             
@@ -39,8 +46,61 @@ def cart():
 
 
 def available_seats():
-    pass
-
+    while True:
+        user_input = input("Do you want to check available seats? (yes/no): ")
+        if user_input.lower() == 'yes':
+            print("from which restaurant you want to check available seats?" \
+            "1. 🍕 Pizza Palace\n2. 🍜 Wok Express\n3. 🍚 Spice Hub\n4. 🍔 Burger Point")
+            restaurant_choice = input("Enter the restaurant number: ")
+            if restaurant_choice == '1':
+                seats = 20
+                print(f"Available seats at Pizza Palace: {seats}")
+                user= input("do you want to book the seats? (yes/no)")
+                if user.lower() == 'yes':
+                    seats_to_book = int(input("How many seats do you want to book? "))
+                    if seats_to_book <= 20:
+                        seats -= seats_to_book
+                        print(f"{seats_to_book} seats booked at Pizza Palace.")
+                    else:
+                        print("Sorry, not enough seats available.")
+            elif restaurant_choice == '2':
+                seats = 15
+                print(f"Available seats at Wok Express: {seats}")
+                user = input("do you want to book the seats? (yes/no)")
+                if user.lower() == 'yes':
+                    seats_to_book = int(input("How many seats do you want to book? "))
+                    if seats_to_book <= 15:
+                        seats -= seats_to_book
+                        print(f"{seats_to_book} seats booked at Wok Express.")
+                    else:
+                        print("Sorry, not enough seats available.") 
+            elif restaurant_choice == '3':
+                seats = 25
+                print(f"Available seats at Spice Hub: {seats}")
+                user = input("do you want to book the seats? (yes/no)")
+                if user.lower() == 'yes':
+                    seats_to_book = int(input("How many seats do you want to book? "))
+                    if seats_to_book <= 25:
+                        seats -= seats_to_book
+                        print(f"{seats_to_book} seats booked at Spice Hub.")
+                    else:
+                        print("Sorry, not enough seats available.")
+            elif restaurant_choice == '4':
+                seats = 10
+                print(f"Available seats at Burger Point: {seats}")
+                user = input("do you want to book the seats? (yes/no)")
+                if user.lower() == 'yes':
+                    seats_to_book = int(input("How many seats do you want to book? "))
+                    if seats_to_book <= 10:
+                        seats -= seats_to_book
+                        print(f"{seats_to_book} seats booked at Burger Point.")
+                    else:
+                        print("Sorry, not enough seats available.")
+            else:
+                print("Invalid choice.")
+        elif user_input.lower() == 'no':
+            print("Okay, maybe next time!")
+            break
 
 def my_reservations():
     pass
@@ -67,7 +127,16 @@ def food_points():
 
 
 def reviews():
-    pass
+    while True: 
+        user_input = input("want to give a review? (yes/no)")
+        if user_input.lower() == 'yes':
+            review = input("Please enter your review: ")
+            print(f"Thank you for your review: {review}")
+        elif user_input.lower() == 'no':
+            print("No problem! Maybe next time.")
+            break
+        else:
+            print("Invalid input. Please type 'yes' or 'no'.")
 
 
 def notifications():
